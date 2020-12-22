@@ -1,0 +1,30 @@
+mixin main()
+    section.main
+        .wrapper.main__wrapper.traced#main.hidd-block
+            h2.main__subtitle Инвестируй вместе с нами!
+            h1.main__title Со мной ты увеличишь <br> свой капитал
+                span.main__textSlider(data-period="2000" data-rotate='[ "быстро.", "надёжно.", "безопасно." ]')
+            p.main__text.text.
+                Хочешь увеличить свои сбережения, но не знаешь с чего начать?
+                Просто запишись на Бесплатную консультация
+                и я расскажу и покажу как можно сохранить и приумножить свой капитал!
+            a.main__linkPopup.popup-form(href="#popup-form") Бесплатная консультация
+            #popup-form.form-block.mfp-hide
+                form.main__form#main__form(name="form")
+                    h2.main__formTitle Мы с вами свяжемся
+                    .hint Заполните поля
+                    input._req(type="text" name="user_name" placeholder="Ваше имя *")
+                    input._req._email(type="text" name="user_email" placeholder="Ваш Email *")
+                    input._req(type="text" name="user_phone" placeholder="Ваш телефон *")
+                    select(name="types" id="select_type").main__select
+                        option(value="none" hidden="") Выберите тип
+                        option(value="Пассивный инвестор") Пассивный инвестор
+                        option(value="Пассивный инвестор +") Пассивный инвестор +
+                        option(value="Активный инвестор") Активный инвестор
+                        option(value="Быстрый старт") Быстрый старт
+                        option(value="Пакет Vip") Пакет Vip
+                    //- textarea(type="text" name="text" rows="5" placeholder="Напишите, что вас интересует *")
+                    input(type="submit" value="Отправить заявку").btn
+
+
+

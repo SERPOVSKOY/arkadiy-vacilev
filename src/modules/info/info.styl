@@ -1,0 +1,103 @@
+.info
+    &__other
+        display flex
+        flex-direction: column
+        position relative
+    &__title2
+        width: 100%
+        text-align: center
+        font-size: 25px
+        font-weight: 600
+        color: #000
+        text-align: center
+        +above(t)
+            color: #fff
+            position: absolute
+            top: 15px
+            font-size: 25px
+    &__block
+        padding: 25px 9px
+        display flex
+        position relative
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        +above(t)
+            flex-direction: row
+            align-items: unset
+            padding: 0 9px
+        &::after
+            content: ""
+            background: $color-main3
+            width: 100%
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            height 100%
+            +above(t)
+                height: 140px
+    &__wrapper
+        display: flex
+        justify-content: center
+        flex-direction: column
+        +above(900px)
+            flex-direction: row
+    &__main
+        padding: 48px 0
+        display flex
+        justify-content flex-start
+        flex-direction: column
+        +above(900px)
+            width 120%
+        +above(l)
+            max-width 285px
+    &__title
+        font-size: 30px
+        font-weight: 700
+        text-align: left
+        margin-bottom: 24px
+        color: $color-black2
+    &__subtitle
+        text-align: left 
+        font-size: 16px
+        margin-bottom: 5px
+        font-weight: 700
+        color: $color-main3
+        line-height 1.8
+    &__button
+        display block
+        padding: 16px 24px
+        color: white
+        background: $color-main3
+        text-decoration: none
+        font-size: 1.1rem
+        border-radius 3px
+        width: max-content
+    &__item
+        margin: 25px 0px
+        height: max-content
+        padding: 20px
+        display flex
+        justify-content center
+        align-items: center
+        flex-direction: column
+        width: 80%
+        background: $color-white
+        border-radius 3px
+        box-shadow: 0px 15px 34px -10px rgba(0, 0, 0, 0.09)
+        +above(t)
+            height: auto
+            margin: 65px 5px
+            width: 100%
+        +above(l)
+            margin: 65px 15px
+    &__icon
+        width 100px
+        height 100px
+        font-size: 50px
+        margin-bottom: 10px
+    &__name
+        color: $color-black2
+        font-size: 18px
+        font-weight: 600

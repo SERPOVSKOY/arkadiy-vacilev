@@ -1,0 +1,36 @@
+mixin about()
+    section.about
+        .wrapper.about__wrapper
+            .about__left
+                img.about__avatar(src=require("../static/images/about.jpg").default)
+                a.about__video.popup-youtube(href="https://vimeo.com/45830194")
+                    img(src=require("../static/images/play.png").default)
+            .about__block.traced#about.hidd-block
+                p.about__subtitle Привет, меня зовут Аркадий Васильев!
+                h2.about__title.title Мой опыт - это более 5 лет<br> успешных инвестиций в онлайн проекты
+                p.about__text.about__text-top.text Присоеденяйся ко мне и нашему клубу инвесторов Golden Island
+                ul.about__list
+                    li.about__item
+                        a.about__link.active(href="#info1") Моя цель
+                    li.about__item
+                        a.about__link(href="#info2") Миссия
+                    li.about__item
+                        a.about__link(href="#info3") Стратегия
+                .about__content
+                    p.about__text.about__text-c.text#info1.show.
+                        Моя цель это - популяризация направлений онлайн-инвестирования,
+                        а также предоставление актуальных и прибыльных возможностей заработка
+                        исключительно при помощи устройства с доступом в интернет.
+                        Ключевые параметры достижения цели - наивысший доход при
+                        максимально возможном уровне свободы.
+                    p.about__text.about__text-c.text#info2.
+                        Миссия - развитие и распространении идеи пассивного дохода и активного заработка
+                        с максимальным уровнем свободы. Клуб Golden Island в котором я состою,
+                        придеживается той же концепции и помогает мне в достижении моих целей.
+                    p.about__text.about__text-c.text#info3.
+                        Я выделяю две ключевые стратегии для того чтобы Вы достигли своих
+                        финансовых целей. Вы можете достаточно быстро создать пассивный доход
+                        и получать деньги лежа на диване, в прямом смысле этих слов.
+                        Или вы можете совместить инвестиции с активным доходом, который заключается
+                        в популяризации инструментов для приумножения капитала. Какую стратегию
+                        выбрать - вы решаете сами.

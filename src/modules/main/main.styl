@@ -1,0 +1,207 @@
+.main
+    background-image url('./images/bg_main_s.jpg')
+    background-size cover
+    height 100vh
+    display flex
+    justify-content center
+    align-items center
+    +above(l)
+        background-image url('./images/bg_main.jpg')
+        background-size cover
+    &__wrapper
+        height 100%
+        width 100%
+        display flex
+        align-items flex-start
+        justify-content center
+        flex-direction column
+    &__subtitle
+        font-size: 14px
+        font-weight: 800
+        text-transform: uppercase
+        color: rgba(0,0,0,.8)
+        border-radius: 4px
+        box-shadow: inset 0px 20px 10px #c7a868b8
+        padding: 2px 4px
+        text-align: left
+        position: relative
+        margin-top: 57%
+        +above(t)
+            margin-top: unset
+    &__title
+        text-align left
+        color $color-white
+        line-height 1.5
+        font-weight 700
+        font-size 25px
+        margin 0
+        +above(t)
+            font-size 48px
+    &__textSlider
+        font-size 25px
+        color $color-main
+        line-height 1.5
+        font-weight 700
+        min-height 72px
+        position relative
+        margin-bottom 0.5rem
+        +above(t)
+            font-size 48px
+        &:after
+            position absolute
+            top 0
+            bottom 0
+            right -10px
+            width 5px
+            height 100%
+            content ''
+            background $color-main3
+            text-decoration blink
+            animation blink 1s ease-in-out infinite
+    &__text
+        max-width 500px
+        font-size: 15px
+        color: #d2cfd0
+        +above(t)
+            font-size: 18px
+    &__linkPopup
+        display: block
+        padding: 0 16px
+        font-family: Helvetica
+        border-bottom: 5px solid #2d0707
+        background: linear-gradient(#991b1b,#490e0e)
+        color: white
+        border-radius: 10px
+        box-shadow: 0px 2px 10px grey
+        transition: 150ms ease
+        text-align: center
+        line-height: 50px
+        font-weight: bold
+        text-decoration: none
+        &:active
+            border: none
+            border-bottom: 2px solid #490e0e
+            box-shadow: 0px 1px 5px grey
+            background: linear-gradient(#490e0e,#991b1b)
+            color: #fff
+
+    &__form
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        width 100%
+    &__formBlock
+        display flex
+        justify-content center
+        align-items center
+        flex-direction column
+        z-index 4
+        background #fff
+        border-radius 20px
+        padding 30px 0
+
+    &__formTitle
+        color: $color-main3
+        font-size: 20px
+        +above(t)
+            font-size: 30px
+    &__form > textarea
+        max-width 65%
+        min-width 65%
+        max-height 220px
+        min-height 50px
+        width 100%
+        padding 7px 10px
+        border 1px solid black
+        border 1px solid $color-main3
+
+    &__form > input
+        border 1px solid $color-main3
+        padding 10px
+        width 65%
+        font-size: 14px
+        margin-bottom 10px
+
+    &__form > input._error
+        box-shadow 0 0 15px red
+
+    &__form > input[type="submit"]
+        background $color-main3
+        border 1px solid transparent
+        color #fff
+        transition .3s
+        padding 15px 20px
+        margin 25px 0 15px
+
+    &__form > button::hover
+        color black
+        border 1px solid #afa939
+        background transparent
+        transition .3s
+    &__select
+        border: 1px solid #7a6352
+        padding: 8px 10px
+        width: 65%
+        font-size: 14px
+.hint
+    display none
+    padding 2px 10px
+    border-radius 32px
+    border 1px solid red
+    text-align center
+    margin-bottom 30px
+    font-size 14px
+    width 66%
+    color red
+    font-family Arial
+    animation pulse 2s infinite
+    position relative
+    z-index 2
+
+.hint.active
+    display block
+
+.form-block
+    display flex
+    justify-content center
+    align-items center
+    padding 25px
+    background-color white
+    width 90vw
+    margin 0 auto
+    position relative
+    flex-direction column
+    max-height 80vh
+    +above(l)
+        width 35%
+
+.form-block::after
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background rgba(51, 51, 51, 0.9) url("../../modules/main/images/loading.gif") center / 80px no-repeat
+    opacity 0
+    border-radius 10px
+    visibility hidden
+    transition all .5s ease 0s
+
+.form-block._sending::after
+    opacity 1
+    visibility visible
+
+.form-block > h2
+    margin-bottom 20px
+
+.mfp-close-btn-in.mfp-close
+    right 10px
+    top 10px
+
+@keyframes blink
+    from
+        opacity 0
+    to
+        opacity 1

@@ -1,0 +1,19 @@
+mixin header()
+    header.header
+        .wrapper.header__wrapper
+            .header__block
+                a.header__logo.logo(onclick="window.location.reload()") Инвестиции<span>Аркадий Васильев</span>
+                button.header__burger
+                    span
+                    p Меню
+            nav.header__nav
+                ul.header__navList
+                    li.header__navItem
+                        a(href="#main").header__navLink Главная
+                    li.header__navItem
+                        a(href="#about").header__navLink Обо мне
+                    li.header__navItem
+                        a(href="#service").header__navLink Услуги
+                    li.header__navItem
+                        a(href="#partner").header__navLink Партнеры
+

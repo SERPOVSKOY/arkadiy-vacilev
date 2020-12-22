@@ -1,0 +1,104 @@
+.footer
+    padding 25px 0
+    background $color-main3
+    box-shadow: 0 -10px 20px -10px rgba(0,0,0,.62)
+    +above(t)
+        padding 50px 0
+    &__wrapper
+        display flex
+        justify-content space-between
+        align-items center
+        flex-direction column
+        +above(t)
+            flex-direction row
+    &__logo
+        display flex
+        flex-direction column
+        font-weight 700
+        color: white
+        font-size 20px
+        line-height 1
+        text-transform uppercase
+        text-decoration none
+        margin-bottom 20px
+        text-align center
+        transition: .3s
+        +above(t)
+            margin-bottom 0
+            text-align left
+        span
+            display: block
+            font-size: 11px
+            font-weight: 600
+            line-height 1
+            color: white
+    &__text
+        color: white
+        margin-bottom: 10px
+        font-size: 17px
+    &__phone
+        text-decoration none
+        transition .2s
+        font-weight: 200
+        font-size: 15px
+        &:hover
+            color: #c7a868
+            transition .2s
+    &__contact
+        color: white
+    &__contacts
+        display flex
+        flex-direction column
+        justify-content: center
+        align-items center
+        margin-bottom 20px
+        +above(t)
+            align-items flex-start
+            margin-bottom 0
+        +above(l)
+            justify-content: space-around
+            flex-direction row
+            width: 50%
+    &__mail
+        text-decoration none
+        transition .2s
+        font-weight: 200
+        font-size: 15px
+        &:hover
+            color: #c7a868
+            transition .2s
+    &__social
+        display: flex
+        +above(t)
+            padding 10px 0
+        & i
+            font-size: 50px
+    &__link
+        display: flex
+        margin: 0 5px
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        transition .3s
+        &:hover
+            transition .3s
+            transform scale(1.1)
+        & i
+            color #c7a86894
+        // &-insta
+        //     background: linear-gradient(57deg, rgba(254,184,2,1) 0%, rgba(204,100,109,1) 50%, rgba(160,26,205,1) 100%);
+        //     -webkit-background-clip: text
+        //     -webkit-text-fill-color: transparent
+        //     color: white
+        // &-wa
+        //     background: linear-gradient(57deg, #18a232 0%, #3bd456 50%, #53e96c 100%);
+        //     -webkit-background-clip: text
+        //     -webkit-text-fill-color: transparent
+        //     color: white
+        // &-telega
+        //     background: linear-gradient(57deg, #63b7d7 0%, #44b4ea 50%, #409cc7 100%);
+        //     -webkit-background-clip: text
+        //     -webkit-text-fill-color: transparent
+        //     color: white
+        // &-vk
+        //     color: #5dbcd2 !important

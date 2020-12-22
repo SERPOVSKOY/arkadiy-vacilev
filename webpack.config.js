@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -47,13 +48,13 @@ const isProd = !isDev;
 
 module.exports = {
     mode: 'development',
-    devtool: isProd ? false : 'cheap-module-source-map',
+    devtool: 'source-map',
     entry: `${PATHS.source}/static/js/index.js`,
     output: {
         filename: 'bundle.js',
         path: PATHS.dist,
+        publicPath: './',
     },
-
     module: {
         rules: [
             {
@@ -128,7 +129,11 @@ module.exports = {
             filename: 'css/styles.css',
         }),
         new ZipPlugin({
-            filename: `web-site-${GetTimestamp()}.zip`,
+            filename: `site-${GetTimestamp()}.zip`,
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
         }),
     ],
     resolve: {
@@ -139,6 +144,6 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        hot: isDev
+        hot: isDev,
     },
 };

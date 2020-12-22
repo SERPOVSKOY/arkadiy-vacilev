@@ -1,0 +1,20 @@
+mixin item(item, name, link, insta, comment)
+    .partner__item
+        .partner__wrapItem
+            div(class=`partner__wrapItem-front partner-front partner-front-${item}`)
+                .partner__info
+                    h2.partner__name= name
+                    a(href=link target="blank").partner__link= insta
+            div(class=`partner__wrapItem-back partner-comment partner-comment-${comment}`)
+
+mixin partner()
+    section.partner
+        .wrapper.partner__wrapper
+            h3.subtitle.subpartner__title Вступай в наши ряды
+            h2.title.partner__title ТОП партнеры
+            .slider.partner__slider.traced.hidd-block#partner
+                +item('1', 'Анжелика Субеди', 'https://www.instagram.com/anzhelichas/', '@anzelichas', '1')
+                +item('2', 'Виталий Лединин', 'https://www.instagram.com/ledinin.1997/', '@ledinin.1997', '2')
+                +item('3', 'Ирина Ильясова', 'https://www.instagram.com/irlyas/?igshid=uk785iswfolu', '@irlyas', '3')
+                +item('4', 'Юрий Попов', 'https://www.instagram.com/yuriy_p0p0v/?igshid=yujdocxqgf7p', '@yuriy_p0p0v', '4')
+                +item('5', 'Дмитрий Галныкин', 'https://www.instagram.com/dmitriigalnykin/?igshid=gxoep49ryf0y', '@dmitriigalnykin', '5')

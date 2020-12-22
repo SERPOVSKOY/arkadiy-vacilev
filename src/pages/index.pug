@@ -1,4 +1,18 @@
 extends ../layouts/default
+include ../modules/header/header
+include ../modules/main/main
+include ../modules/info/info
+include ../modules/about/about
+include ../modules/service/service
+include ../modules/partner/partner
+include ../modules/footer/footer
 
 block content
-    p Test content
+    +header
+    main
+        +main
+        +info
+        +about
+        +service
+        +partner
+    +footer

@@ -6,7 +6,10 @@
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}]
     },
     "env": {
-        "browser": true
+        "browser": true,
+        "jquery": true,
+        "Waypoint": true,
+        "slick-carousel": true
     },
     "settings": {
         "import/resolver": {

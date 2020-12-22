@@ -1,0 +1,111 @@
+.about
+    padding: 50px 0
+    &__wrapper
+        display flex
+        justify-content center
+        flex-direction: column
+        align-items: center
+        +above(t)
+            flex-direction: row
+    &__block
+        width: 100%
+        display: flex
+        flex-direction: column
+        +above(t)
+            padding: 33px 0 0 48px
+            width: 60%
+    &__left
+        width: 70%
+        position relative
+        +above(920px)
+            margin: 35px 16px
+        +above(t)
+            width 45%
+    &__avatar
+        width: 100%
+        margin: 25px 0
+        // border-radius: 50%
+        box-sizing: border-box
+        // box-shadow: 0 0 20px #000
+        box-shadow: 0 10px 34px -10px rgba(0,0,0,.8)
+        border: 15px solid #f3f3f3
+        border-radius: 3px
+    &__title
+        margin-bottom: 24px
+    &__subtitle
+        font-size: 16px
+        margin-bottom: 5px
+        font-weight: 700
+        color: #7a6352
+        text-align: center
+    &__text
+        &-top
+            margin-bottom: 16px
+            text-align: center
+            font-size: 15px
+            +above(t)
+                font-size: 16px
+        &-c
+            display: none
+            &.show
+                display block
+    &__list
+        width: 100%
+        display: flex
+        flex-direction: column
+        +above(t)
+            flex-direction: row
+    &__item
+        flex 1
+    &__item:nth-child(2)
+        padding: 0.5rem 0
+        +above(t)
+            padding: 0 0.5rem
+    &__link
+        text-align center
+        font-weight: 600
+        flex 1
+        display: block
+        border-radius: 4px
+        color: black !important
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        padding 8px 16px
+        text-decoration: none
+        &.active
+            background: #7a6352
+            border: 1px solid #7a6352
+            color: #fff !important
+    &__content
+        padding: 20px
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        background: #f8f9fa
+        margin-top: 8px
+    &__video
+        position: absolute
+        width: 80px
+        height: 80px
+        display none
+        background: rgba(198,10,10,.761)
+        -webkit-animation: pulse 2s infinite
+        animation: pulse 2s infinite
+        border-radius: 50%
+        top: 50%
+        right 50%
+        transform: translate(50%, -50%)
+        // display flex
+        justify-content center
+        align-items center
+        +above(l)
+            right: 0
+        & > img 
+            width: 16px
+            height: 20px
+            margin-left 4px
+
+@keyframes pulse
+  0%
+    box-shadow: 0 0 0 0 rgba(198, 10, 10, 0.4)
+  70%
+    box-shadow: 0 0 0 30px rgba(198, 10, 10, 0)
+  100%
+    box-shadow: 0 0 0 0 rgba(198, 10, 10, 0)
